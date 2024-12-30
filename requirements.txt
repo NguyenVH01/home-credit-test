@@ -9,3 +9,4 @@ pillow==10.1.0
 pymysql==1.1.0
 bcrypt==4.0.1
 python-jose==3.3.0 
+plotly
