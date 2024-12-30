@@ -15,6 +15,47 @@ st.set_page_config(
     layout="wide"
 )
 
+# Add meta tags
+st.markdown("""
+    <head>
+        <!-- Primary Meta Tags -->
+        <meta name="title" content="Home Credit 360° Review">
+        <meta name="description" content="Hệ thống đánh giá nhân viên 360° của Home Credit - Đánh giá toàn diện, minh bạch và công bằng">
+        <meta name="keywords" content="home credit, đánh giá 360, đánh giá nhân viên, quản lý nhân sự, performance review">
+        <meta name="author" content="Home Credit Vietnam">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://review.homecredit.vn/">
+        <meta property="og:title" content="Home Credit 360° Review">
+        <meta property="og:description" content="Hệ thống đánh giá nhân viên 360° của Home Credit - Đánh giá toàn diện, minh bạch và công bằng">
+        <meta property="og:image" content="https://review.homecredit.vn/assets/images/og-image.jpg">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://review.homecredit.vn/">
+        <meta property="twitter:title" content="Home Credit 360° Review">
+        <meta property="twitter:description" content="Hệ thống đánh giá nhân viên 360° của Home Credit - Đánh giá toàn diện, minh bạch và công bằng">
+        <meta property="twitter:image" content="https://review.homecredit.vn/assets/images/twitter-image.jpg">
+        
+        <!-- Additional Meta Tags -->
+        <meta name="application-name" content="Home Credit 360° Review">
+        <meta name="theme-color" content="#0066cc">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- Apple Meta Tags -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="HC Review">
+        
+        <!-- Microsoft Tiles -->
+        <meta name="msapplication-TileColor" content="#0066cc">
+        <meta name="msapplication-config" content="https://review.homecredit.vn/assets/browserconfig.xml">
+    </head>
+""", unsafe_allow_html=True)
+
 # Custom CSS for elegant styling
 st.markdown("""
     <style>
@@ -34,6 +75,33 @@ st.markdown("""
     }
     h1, h2, h3 {
         color: #2c3e50;
+    }
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        .main {
+            padding: 1rem;
+        }
+        .stButton>button {
+            width: 100%;
+        }
+    }
+    /* Dark Mode Support */
+    @media (prefers-color-scheme: dark) {
+        .stApp {
+            background-color: #1a1a1a;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+    }
+    /* Print Styles */
+    @media print {
+        .stButton, .stSidebar {
+            display: none !important;
+        }
+        .main {
+            padding: 0;
+        }
     }
     </style>
 """, unsafe_allow_html=True)
