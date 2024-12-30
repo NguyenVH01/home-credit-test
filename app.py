@@ -12,19 +12,7 @@ import os
 st.set_page_config(
     page_title="Home Credit 360° Review",
     page_icon="🏢",
-    layout="wide",
-    menu_items={
-        'Get Help': 'https://homecredit.vn/support',
-        'Report a bug': 'https://homecredit.vn/bug-report',
-        'About': '''
-        # Home Credit 360° Review
-        Hệ thống đánh giá nhân viên 360° của Home Credit - Đánh giá toàn diện, minh bạch và công bằng.
-        
-        Version: 1.0.0
-        © 2024 Home Credit Vietnam
-        '''
-    },
-    initial_sidebar_state="expanded"
+    layout="wide"
 )
 
 # Custom CSS for elegant styling
@@ -46,49 +34,6 @@ st.markdown("""
     }
     h1, h2, h3 {
         color: #2c3e50;
-    }
-    /* Responsive Design */
-    @media screen and (max-width: 768px) {
-        .main {
-            padding: 1rem;
-        }
-        .stButton>button {
-            width: 100%;
-        }
-    }
-    /* Dark Mode Support */
-    @media (prefers-color-scheme: dark) {
-        .stApp {
-            background-color: #1a1a1a;
-        }
-        h1, h2, h3 {
-            color: #ffffff;
-        }
-    }
-    /* Print Styles */
-    @media print {
-        .stButton, .stSidebar {
-            display: none !important;
-        }
-        .main {
-            padding: 0;
-        }
-    }
-    /* Custom Branding */
-    .stApp > header {
-        background-color: #0066cc;
-    }
-    .stApp > header .decoration {
-        background-image: none;
-    }
-    footer {
-        visibility: hidden;
-    }
-    #MainMenu {
-        visibility: visible;
-    }
-    .stDeployButton {
-        display: none !important;
     }
     </style>
 """, unsafe_allow_html=True)
