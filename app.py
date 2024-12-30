@@ -12,17 +12,38 @@ import os
 st.set_page_config(
     page_title="Home Credit 360° Review",
     page_icon="🏢",
-    layout="wide"
+    layout="wide",
+    menu_items={
+        'Get Help': 'https://homecredit.vn/support',
+        'Report a bug': 'https://homecredit.vn/bug-report',
+        'About': '''
+        # Home Credit 360° Review
+        Hệ thống đánh giá nhân viên 360° của Home Credit - Đánh giá toàn diện, minh bạch và công bằng.
+        
+        Version: 1.0.0
+        © 2024 Home Credit Vietnam
+        '''
+    },
+    initial_sidebar_state="expanded"
 )
+
+# Add logo and header
+col1, col2 = st.columns([1, 4])
+with col1:
+    st.image("https://explore.homecredit.ph/img/HC-Home-Logo.svg", width=150)
+with col2:
+    st.write("")  # Để tạo khoảng trống cân đối
 
 # Custom CSS for elegant styling
 st.markdown("""
     <style>
+    /* Light Theme */
     .stApp {
-        background-color: #f8f9fa;
+        background-color: #ffffff !important;
     }
     .main {
         padding: 2rem;
+        background-color: #ffffff;
     }
     .stButton>button {
         background-color: #0066cc;
@@ -31,9 +52,99 @@ st.markdown("""
     }
     .stTextInput>div>div>input {
         border-radius: 5px;
+        background-color: #ffffff;
     }
     h1, h2, h3 {
-        color: #2c3e50;
+        color: #2c3e50 !important;
+    }
+    /* Logo styling */
+    .stImage {
+        margin-top: -60px;
+        margin-bottom: -40px;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        .main {
+            padding: 1rem;
+        }
+        .stButton>button {
+            width: 100%;
+        }
+        .stImage {
+            margin-top: -30px;
+            margin-bottom: -20px;
+        }
+    }
+    /* Print Styles */
+    @media print {
+        .stButton, .stSidebar {
+            display: none !important;
+        }
+        .main {
+            padding: 0;
+        }
+    }
+    /* Custom Branding */
+    .stApp > header {
+        background-color: #0066cc !important;
+    }
+    .stApp > header .decoration {
+        background-image: none;
+    }
+    /* Sidebar styling */
+    .css-1d391kg {
+        background-color: #f8f9fa !important;
+    }
+    .sidebar .sidebar-content {
+        background-color: #f8f9fa !important;
+    }
+    /* Form elements */
+    .stSelectbox>div>div {
+        background-color: #ffffff !important;
+    }
+    .stTextArea textarea {
+        background-color: #ffffff !important;
+    }
+    .stDateInput>div>div>input {
+        background-color: #ffffff !important;
+    }
+    /* Metric styling */
+    .css-1xarl3l {
+        background-color: #ffffff !important;
+    }
+    /* Expander styling */
+    .streamlit-expanderHeader {
+        background-color: #f8f9fa !important;
+    }
+    .streamlit-expanderContent {
+        background-color: #ffffff !important;
+    }
+    /* Hide footer */
+    footer {
+        visibility: hidden;
+    }
+    /* Show main menu */
+    #MainMenu {
+        visibility: visible;
+    }
+    /* Hide deploy button */
+    .stDeployButton {
+        display: none !important;
+    }
+    /* Table styling */
+    .dataframe {
+        background-color: #ffffff !important;
+    }
+    .dataframe th {
+        background-color: #f8f9fa !important;
+    }
+    /* Chart background */
+    .js-plotly-plot {
+        background-color: #ffffff !important;
     }
     </style>
 """, unsafe_allow_html=True)
